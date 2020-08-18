@@ -13,22 +13,22 @@ const items =[
     {
         key: String(Math.random()),
         img:img1,
-        Label: 'Doações',
+        Label: 'Recarga',
     },
     {
         key: String(Math.random()),
         img: img2,
-        Label: 'Doações',
+        Label: 'Uber',
     },
     {
         key: String(Math.random()),
         img: img3,
-        Label: 'Doações',
+        Label: 'Ônibus',
     },
     {
         key: String(Math.random()),
         img: img4,
-        Label: 'Doações',
+        Label: 'TV',
     },
     {
         key: String(Math.random()),
@@ -38,12 +38,12 @@ const items =[
     {
         key: String(Math.random()),
         img: img6,
-        Label: 'Doações',
+        Label: 'Barras',
     },
     {
         key: String(Math.random()),
         img: img7,
-        Label: 'Doações',
+        Label: 'FAQ',
     },
 
 ]
@@ -52,6 +52,7 @@ export default function Suggestions() {
     return (
         <ScrollView 
             horizontal={true}  // se horizontal scroll
+            showsHorizontalScrollIndicator={false} 
             style={styles.container} contentContainerStyle= {{
             alignItems:'center',
             justifyContent:'center',
@@ -59,7 +60,7 @@ export default function Suggestions() {
             paddingLeft:16
         }}>        
             {items.map((item) => (
-                <TouchableOpacity key={item.key} style={styles.Optiom}>
+                <TouchableOpacity key={item.key} style={styles.Option}>
                 <Image source={item.img} />
                 <Text style={styles.Label}>{item.Label}</Text>
                 </TouchableOpacity>
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#1e222b', 
       height: 130,
     },
-Optiom: {
+Option: {
     width: 80,
     marginLeft: 16,
     alignItems: "center",

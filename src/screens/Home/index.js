@@ -5,6 +5,8 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import Suggestions from '../../components/Suggestions';
 import Activities from '../../components/Activities';
+import Tips from '../../components/Tips';
+import Banner from '../../components/Banner';
 
 MaterialCommunityIcons.loadFont();
 AntDesign.loadFont();
@@ -30,8 +32,10 @@ export default function Home() {
                 
               </View>
 
-              <Suggestions></Suggestions>
-              <Activities></Activities>
+              <Suggestions />
+              <Activities />
+              <Tips />
+              <Banner />
 
             </ScrollView>
         </SafeAreaView>

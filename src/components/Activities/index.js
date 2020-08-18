@@ -1,6 +1,12 @@
 import React from 'react';
 import { StyleSheet, ScrollView, TouchableOpacity, Image, Text, View } from 'react-native';
 
+import Icon from 'react-native-vector-icons/Feather';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+Icon.loadFont();
+
 import avatar from '../../images/avatar.png';
 
 export default function Activities() {
@@ -17,6 +23,40 @@ export default function Activities() {
                         <Text style={styles.Bold}>Você</Text> pagou a <Text style={styles.Bold}>@mateusilva</Text> 
                     </Text>
                 </View>
+
+                <View style={styles.CardBody}>
+                    <Text style={styles.UserName}>Matheus Silva</Text>
+                </View>
+
+                <View style={styles.CardFooter}>
+
+                    <View style={styles.Details}>
+                        <Text style={styles.Value}>R$ 18,00</Text>
+
+                        <View style={styles.Divider}></View>
+
+                        <Icon name="lock" color="#fff" sixe={14}/>
+                        <Text style={styles.Date}>há 2 anos</Text> 
+
+                    </View>
+
+                    <View style={styles.Actions}>
+                        <TouchableOpacity style={styles.Option}>
+                            <MaterialCommunityIcons name="comment-outline" size={14}
+                            color="#fff" />
+                            <Text style={styles.OptionLabel}>0</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.Option}>
+                            <AntDesign name="hearto" size={14}
+                            color="#fff" />
+                            <Text style={styles.OptionLabel}>0</Text>
+                        </TouchableOpacity>
+
+                    </View>
+
+                </View>
+
             </View>
         </View>
     );
@@ -24,7 +64,7 @@ export default function Activities() {
 
 const styles = StyleSheet.create({
 Container: {
-    marginTop: 20,
+    marginTop: 10,
     paddingLeft:16,
     paddingRight:16,
     padding:15, 
@@ -58,5 +98,55 @@ Descrition: {
 Bold: {
     fontWeight: "bold",
 },
+CardBody: {
+    marginTop:20,
+
+},
+UserName: {
+    color: '#fff',
+    fontSize: 20,
+},
+CardFooter: {
+    marginTop: 15,
+    flexDirection: "row",
+    justifyContent: "space-between"
+},
+Details: {
+    flexDirection: "row",
+    alignItems: "center",
+},
+Value: {
+    color: '#f75175',
+    fontSize: 14,
+    fontWeight: "bold",
+},
+
+Divider: {
+    width: 2,
+    height: 13,
+    backgroundColor: 'rgba(255,255,255,0.4)',
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 10,
+    marginRight: 10,
+},
+Date: {
+    color: '#fff',
+    marginLeft: 5,
+},
+
+Actions: {
+    flexDirection: "row",
+},
+Option: {
+    marginLeft: 15,
+    flexDirection: "row",
+},
+OptionLabel: {
+    color: '#fff',  
+    fontSize: 14,
+    marginLeft:5,
+},
+
 }); 
 
