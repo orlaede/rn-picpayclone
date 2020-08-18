@@ -11,6 +11,7 @@ import Banner from '../../components/Banner';
 MaterialCommunityIcons.loadFont();
 AntDesign.loadFont();
 
+
 //import { Wrapper } from './styles';
  
 export default function Home() {
